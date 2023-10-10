@@ -10,9 +10,9 @@ public class Main {
 
         Bicycle bicycle = new Bicycle("bicycle1",2);
         Bicycle bicycle2 = new Bicycle("bicycle2",2);
-        bicycle.checkBicycle(bicycle);
-        car2.checkCar(car2);
-        truck.checkTruck(truck);
+        bicycle.check();
+        car2.check();
+        truck.check();
 
     }
 }
