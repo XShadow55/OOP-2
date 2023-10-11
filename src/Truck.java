@@ -1,4 +1,4 @@
-public class Truck extends ServiceStation {
+public class Truck extends MotorTransport {
 
     private String modelName;
     private int wheelsCount;
@@ -7,26 +7,32 @@ public class Truck extends ServiceStation {
         this.wheelsCount = wheelsCount;
     }
     @Override
-    public void check() {
-        System.out.println("Обслуживаем " + modelName);
-        for (int i = 0; i < wheelsCount; i++) {
+    public void servis() {
+        System.out.println("Обслуживаем "+modelName);
+        for(
+                int i = 0;
+                i<wheelsCount;i++)
+
+        {
             updateTyre();
         }
         checkEngine();
         checkTrailer();
     }
-    public String getModelName(){return modelName;}
-    public int getWheelsCount(){return wheelsCount;}
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+    public String getModelName(){
+        return modelName; }
+
+    public int getWheelsCount(){
+        return wheelsCount;}
     @Override
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
-
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+    @Override
+    public  void updateTyre(){
+        System.out.println("Меняем покрышку");
     }
 }

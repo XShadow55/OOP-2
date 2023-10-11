@@ -1,11 +1,15 @@
-public abstract class ServiceStation {
+public  class ServiceStation {
 
 
 
+    public void check(Transport[] transports) {
+        for (int i = 0; i < transports.length; i++) {
+            Transport car = transports[i];
+            car.servis();
+
+        }
+
+    }
 
 
-    public abstract void check();
-
-    public abstract void updateTyre();
-    public abstract void checkEngine();
 }
